@@ -15,13 +15,13 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onComprobarUserLogin() {
-    this.authService.getAuth().subscribe( auth => {
-      if( auth ){
-        console.log(auth);
-      }
-    })
-  }
+  // onComprobarUserLogin() {
+  //   this.authService.getAuth().subscribe( auth => {
+  //     if( auth ){
+  //       console.log(auth);
+  //     }
+  //   })
+  // }
 
   onLogout() {
     this.authService.logout();

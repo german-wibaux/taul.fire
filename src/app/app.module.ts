@@ -13,7 +13,7 @@ import { EditComponent } from './components/edit/edit.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { AppRoutingModule } from './app-routing.module';
-// import { PropiedadService } from './services/propiedad.service';
+import { PropertyService } from './services/property.service';
 import { AuthService } from './services/auth.service';
 
 import { environment } from '../environments/environment';
@@ -21,6 +21,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms';
+import { PropertyComponent } from './components/property/property.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     DetailsComponent,
     EditComponent,
     ContactComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    PropertyComponent
   ],
   imports: [
     BrowserModule,
@@ -44,8 +46,9 @@ import { FormsModule } from '@angular/forms';
     AngularFireAuthModule, 
     AngularFireModule,
     FormsModule
+    
   ],
-  providers: [AuthService],
+  providers: [AuthService, PropertyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

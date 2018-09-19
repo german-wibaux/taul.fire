@@ -22,12 +22,12 @@ export class LoginPageComponent implements OnInit {
     password: ''
  };
 
-  onClickGoogleLogin() {
-    this.authservice.loginGoogle()
-    .then((res) => {
-      console.log(res);
-    }).catch( err => console.log(err.message));
-  }
+  // onClickGoogleLogin() {
+  //   this.authservice.loginGoogle()
+  //   .then((res) => {
+  //     console.log(res);
+  //   }).catch( err => console.log(err.message));
+  // }
 
   signInWithEmail() {
     this.authservice.signInRegular(this.user.email, this.user.password)

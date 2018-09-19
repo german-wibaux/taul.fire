@@ -10,6 +10,8 @@ import { DetailsComponent } from './components/details/details.component';
 import { EditComponent } from './components/edit/edit.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { NewPropertyComponent } from './components/new-property/new-property.component';
+import { PropertyComponent } from './components/property/property.component';
 
 
 const routes: Routes = [
@@ -17,7 +19,8 @@ const routes: Routes = [
     {path: 'login', component: LoginPageComponent},
     {path: 'private', canActivate:[AuthGuardService], component: AdminComponent},
     { path: 'contact', component: ContactComponent },
-    { path: 'about', component: AboutComponent },
+    { path: 'about', component: PropertyComponent },
+    { path: 'new-property', component: NewPropertyComponent },
     { path: 'details/:id', component: DetailsComponent },
     { path: 'edit/:id', component: EditComponent },
     { path: '**', component: NotFoundComponent }

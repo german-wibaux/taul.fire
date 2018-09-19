@@ -51,19 +51,19 @@ export class AuthService {
 
      }
 
-    loginGoogle() {
-        return this.afAuth.auth.signInWithPopup( this.provider );
-        //const provider = new firebase.auth.GoogleAuthProvider();
-        // return this.oAuthLogin(provider);
-        // this.afAuth.auth.signInWithPopup(provider).then((result) => {
-        //     console.log(result);
-        //     return provider;
-        // })
-    }
+    // loginGoogle() {
+    //     return this.afAuth.auth.signInWithPopup( this.provider );
+    //     const provider = new firebase.auth.GoogleAuthProvider();
+    //     return this.oAuthLogin(provider);
+    //     this.afAuth.auth.signInWithPopup(provider).then((result) => {
+    //         console.log(result);
+    //         return provider;
+    //     })
+    // }
 
-    getAuth() {
-        return this.afAuth.authState.map(auth => auth);
-    }
+    // getAuth() {
+    //     return this.afAuth.authState.map(auth => auth);
+    // }
 
     // logout() {
     //     return this.afAuth.auth.signOut();
