@@ -14,22 +14,26 @@
     background-size: contain;
 }
 
-.main-container{
+.section-custom {
     
+    display: flex;
+    justify-content: center;   
 }
 
 .custom {
-    background-color: #ffe0b3;
+    background-color:  #ffc999;
     width: 100%;  
     display: flex;
-    justify-content: center;  
-
- 
+    justify-content: center;   
 }
 
 .carousel{
     width: 50%;
-}  
+} 
+
+.custom-row{
+    width: 80%; 
+}
 
 /* .jumbotron{
     display: flex;
