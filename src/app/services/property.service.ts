@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { PropiedadInterface } from '../models/propiedadInterface';
 import { Observable } from 'rxjs';
-import { Action } from 'rxjs/internal/scheduler/Action';
 import { map } from 'rxjs/operators';
 
 
@@ -34,14 +33,16 @@ export class PropertyService {
    addProperty(property: PropiedadInterface){
      this.propertyCollection.add(property);
      
+     
    }
 
-   deletProperty() {
+   deletProperty(property: PropiedadInterface) {
     console.log('Delete property');
    }
 
-   updateProperty() {
-     console.log('Update property');
+   updateProperty(property: PropiedadInterface) {
+     this.propertyDoc = this.afs.doc(`properties/${property.id}`);
+     this.propertyDoc.update(property);
    }
 
 
