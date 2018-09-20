@@ -5,78 +5,75 @@
   </div>
   <div class="row justify-content-center">
       <div class="col-12 col-lg-9">
-          <form>
+          <form (ngSubmit)="onSaveProperty(formNew)" #formNew="ngForm" >
               <div class="form-row form-group">
                   <div class="col">
-                      <input class="form-control form-control-lg" type="text" id="company" placeholder="Nombre" />
+                      <input [(ngModel)]="property.nombre" [ngModelOptions]="{standalone: true}" #nombre="ngModel" class="form-control form-control-lg" type="text"  placeholder="Nombre" />
                   </div>
               </div>
               <div class="form-row form-group">
                   <div class="col">
-                      <input class="form-control form-control-lg" type="text" id="firstname" placeholder="Codigo" />
-                  </div>
-                  <!-- <div class="col">
-                      <input class="form-control form-control-lg" type="text" id="lastname" placeholder="Last Name" />
-                  </div> -->
+                      <input [(ngModel)]='property.codigo'  [ngModelOptions]="{standalone: true}" #codigo='ngModel' class="form-control form-control-lg" type="text"  placeholder="Codigo" />
+                  </div>                 
               </div>
               <div class="form-row form-group">
                   <div class="col">
-                      <input class="form-control form-control-lg" type="text" id="email" placeholder="Estado" />
+                      <input [(ngModel)]='property.estado' [ngModelOptions]="{standalone: true}" #estado='ngModel' class="form-control form-control-lg" type="text"  placeholder="Estado" />
                   </div>
               </div>
               <div class="form-row form-group">
                   <div class="col">
-                      <input class="form-control form-control-lg" type="text" id="password" placeholder="Descripcion" />            
+                      <input [(ngModel)]='property.descripcion'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
                   </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Habitaciones" />            
+                    <input [(ngModel)]='property.habitaciones'  [ngModelOptions]="{standalone: true}" #habitaciones='ngModel' class="form-control form-control-lg" type="text"  placeholder="Habitaciones" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Baños" />            
+                    <input [(ngModel)]='property.banios'  [ngModelOptions]="{standalone: true}" #banios='ngModel' class="form-control form-control-lg" type="text" placeholder="Baños" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Cocheras" />            
+                    <input [(ngModel)]='property.cocheras'  [ngModelOptions]="{standalone: true}" #cocheras='ngModel' class="form-control form-control-lg" type="text"  placeholder="Cocheras" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Localidad" />            
+                    <input [(ngModel)]='property.localidad'  [ngModelOptions]="{standalone: true}" #localidad='ngModel' class="form-control form-control-lg" type="text"  placeholder="Localidad" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Operacion" />            
+                    <input [(ngModel)]='property.operacion'  [ngModelOptions]="{standalone: true}" #operacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Operacion" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Tipo de propiedad" />            
+                    <input [(ngModel)]='property.propiedad'  [ngModelOptions]="{standalone: true}" #propiedad='ngModel' class="form-control form-control-lg" type="text"  placeholder="Tipo de propiedad" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Superficie cubierta" />            
+                    <input [(ngModel)]='property.superficieCubierta'  [ngModelOptions]="{standalone: true}" #superficieCubierta='ngModel' class="form-control form-control-lg" type="text" placeholder="Superficie cubierta" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Superficie total" />            
+                    <input [(ngModel)]='property.superficieTotal'  [ngModelOptions]="{standalone: true}" #superficieTotal='ngModel' class="form-control form-control-lg" type="text"  placeholder="Superficie total" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Precio" />            
+                    <input [(ngModel)]='property.precio'  [ngModelOptions]="{standalone: true}" #precio='ngModel' class="form-control form-control-lg" type="text"  placeholder="Precio" />            
                 </div>
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input class="form-control form-control-lg" type="text" id="password" placeholder="Geolocalizacion" />            
+                    <input [(ngModel)]='property.geolocalizacion'  [ngModelOptions]="{standalone: true}" #geolocalizacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Geolocalizacion" />            
                 </div>
               </div>
               
@@ -85,10 +82,7 @@
                       <button class="btn btn-block btn-success btn-lg" type="submit">Crear Propiedad</button>
                   </div>
               </div>
-              <!-- <div class="text-center">
-                  <span class="text-small text-muted">By clicking 'Create Account' you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a>&nbsp;and <a href="#">Security Policy</a>
-                  </span>
-              </div> -->
+              
           </form>
       </div>
   </div>
