@@ -1,93 +1,5 @@
-<!-- <div class="col-12 card-body bg-secondary">
-    <div class="text-center mb-5">
-        <h1 class="h2 mb-2">Crear una nueva propiedad</h1>
-        <span>No hay campos obligatorios lo que se cargue es lo que se vera en la pagina</span>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-9">
-            <form (ngSubmit)="onSaveProperty(formNew)" #formNew="ngForm" >
-                <div class="form-row form-group">
-                    <div class="col">
-                        <input [(ngModel)]="property.nombre" [ngModelOptions]="{standalone: true}" #nombre="ngModel" class="form-control form-control-lg" type="text"  placeholder="Nombre" />
-                    </div>
-                </div>
-                <div class="form-row form-group">
-                    <div class="col">
-                        <input [(ngModel)]='property.codigo'  [ngModelOptions]="{standalone: true}" #codigo='ngModel' class="form-control form-control-lg" type="text"  placeholder="Codigo" />
-                    </div>                 
-                </div>
-                <div class="form-row form-group">
-                    <div class="col">
-                        <input [(ngModel)]='property.estado' [ngModelOptions]="{standalone: true}" #estado='ngModel' class="form-control form-control-lg" type="text"  placeholder="Estado" />
-                    </div>
-                </div>
-                <div class="form-row form-group">
-                    <div class="col">
-                        <input [(ngModel)]='property.descripcion'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
-                    </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.habitaciones'  [ngModelOptions]="{standalone: true}" #habitaciones='ngModel' class="form-control form-control-lg" type="text"  placeholder="Habitaciones" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.banios'  [ngModelOptions]="{standalone: true}" #banios='ngModel' class="form-control form-control-lg" type="text" placeholder="Baños" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.cocheras'  [ngModelOptions]="{standalone: true}" #cocheras='ngModel' class="form-control form-control-lg" type="text"  placeholder="Cocheras" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.localidad'  [ngModelOptions]="{standalone: true}" #localidad='ngModel' class="form-control form-control-lg" type="text"  placeholder="Localidad" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.operacion'  [ngModelOptions]="{standalone: true}" #operacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Operacion" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.propiedad'  [ngModelOptions]="{standalone: true}" #propiedad='ngModel' class="form-control form-control-lg" type="text"  placeholder="Tipo de propiedad" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.superficieCubierta'  [ngModelOptions]="{standalone: true}" #superficieCubierta='ngModel' class="form-control form-control-lg" type="text" placeholder="Superficie cubierta" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.superficieTotal'  [ngModelOptions]="{standalone: true}" #superficieTotal='ngModel' class="form-control form-control-lg" type="text"  placeholder="Superficie total" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.precio'  [ngModelOptions]="{standalone: true}" #precio='ngModel' class="form-control form-control-lg" type="text"  placeholder="Precio" />            
-                  </div>
-                </div>
-                <div class="form-row form-group">
-                  <div class="col">
-                      <input [(ngModel)]='property.geolocalizacion'  [ngModelOptions]="{standalone: true}" #geolocalizacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Geolocalizacion" />            
-                  </div>
-                </div>
-                
-                <div class="form-row form-group">
-                    <div class="col">
-                        <button class="btn btn-block btn-success btn-lg" type="submit">Crear Propiedad</button>
-                    </div>
-                </div>
-                
-            </form>
-        </div>
-    </div>
-  </div> -->
-  <section class=" d-flex justify-content-center">
+
+  <section class=" d-flex justify-content-center" ngOnChange="showChange()">
   <div class="row col-10">
     <div class="col">
         <table class="table table-borderless table-hover align-items-center">
@@ -102,36 +14,41 @@
             </thead>
             <tbody>
 
-                <tr class="bg-white">
-                    <th scope="row">
-                        <a class="media align-items-center" href="#">
-                            <!-- <img alt="Image" src="assets/img/logo-snapchat.svg" class="avatar rounded avatar-sm" /> -->
-                            <div class="media-body">
-                                <span class="h6 mb-0">Campo1890</span>
-                                <!-- <span class="text-muted">Social Media</span> -->
+                
+                    <tr *ngFor="let property of properties" class="bg-white ">
+                        <th scope="row">
+                            <a class="media align-items-center">
+                                <!-- <img alt="Image" src="assets/img/logo-snapchat.svg" class="avatar rounded avatar-sm" /> -->
+                                <div class="media-body">
+                                    <span class="h6 mb-0">{{ property.nombre }}</span>
+                                    <!-- <span class="text-muted">Social Media</span> -->
+                                </div>
+                            </a>
+                        </th>
+                        <td>{{ property.descripcion }}</td>
+                        <td>{{ property.propiedad }}</td>
+                        <td>
+                            <!-- <span class="badge badge-success">Active</span> -->
+                            {{ property.estado }}
+                        </td>
+                     
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="dropdownMenuButton-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="icon-dots-three-horizontal"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" (click)="editProperty($event, property)" >Ver/Editar</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Delete</a>
+                                </div>
                             </div>
-                        </a>
-                    </th>
-                    <td>Es un campo de 189ha amplia arboleda etc, etc ,etc</td>
-                    <td>Campo</td>
-                    <td>
-                        <!-- <span class="badge badge-success">Active</span> -->
-                        En venta
-                    </td>
-                    <td>
-                        <div class="dropdown">
-                            <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow" type="button" id="dropdownMenuButton-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="icon-dots-three-horizontal"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Ver/Editar</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Delete</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>                
-                <tr class="table-divider"></tr>
+                        </td>                        
+                    </tr>  
+                                  
+                 
+                
+                
 
             </tbody>
         </table>
@@ -142,3 +59,4 @@
 
 </section>
 <!--end of section-->
+

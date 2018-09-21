@@ -22,15 +22,22 @@ export class HomeComponent implements OnInit {
     this.propertiesService.getProperties().subscribe( properties => {
       /** List every properties */
       this.properties = properties;
-      console.log(this.properties[5]);
-    })
+      //console.log(this.properties);      
+    });
+    
   }
 
-  /*Edit a property*/
-  editProperty(event, property: PropiedadInterface) {
-    this.editState = true;
-    this.propertyToEdit = property;
-  }
+  // ngAfterContentInit() {
+  //   this.propertiesService.getProperties().subscribe( properties => {
+  //     /** List every properties */
+  //     this.properties = properties;
+  //     console.log(this.properties);      
+  //   });
+  // }
+
+
+
+  
 
   updateCurso(property: PropiedadInterface) {
     this.propertiesService.updateProperty(property);

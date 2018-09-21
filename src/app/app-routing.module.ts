@@ -15,9 +15,9 @@ import { PropertyComponent } from './components/property/property.component';
 
 
 const routes: Routes = [
-    {path: '', component: HomeComponent},
+    {path: '', component: HomeComponent  },
     {path: 'login', component: LoginPageComponent},
-    {path: 'private', canActivate:[AuthGuardService], component: AdminComponent},
+    {path: 'private', canActivate:[AuthGuardService], component: AdminComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'about', component: PropertyComponent },
     { path: 'new-property', component: NewPropertyComponent },
