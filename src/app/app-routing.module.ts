@@ -22,7 +22,7 @@ const routes: Routes = [
     { path: 'about', component: PropertyComponent },
     { path: 'new-property', component: NewPropertyComponent },
     { path: 'details/:id', component: DetailsComponent },
-    { path: 'edit/:id', component: EditComponent },
+    { path: 'edit', component: EditComponent },
     { path: '**', component: NotFoundComponent }
 ];
 
