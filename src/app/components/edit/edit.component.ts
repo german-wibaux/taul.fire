@@ -32,23 +32,17 @@ export class EditComponent implements OnInit, OnDestroy {
     
 
   ngOnInit() {
-    // this.idProperty = this.route.snapshot.params['id'];
-    this.propertiesService.getProperties().subscribe( properties => {
-      /** List every properties */
-      this.properties = properties;
-      //console.log(this.properties);
-    });
-   
+    
   }
 
-  ngAfterViewChecked() {
-    // this.idProperty = this.route.snapshot.params['id'];
-    this.propertiesService.getProperties().subscribe( properties => {
-      /** List every properties */
-      this.properties = properties;
-      //console.log(this.properties);
-    });
-  }
+  // ngAfterViewChecked() {
+  //   // this.idProperty = this.route.snapshot.params['id'];
+  //   this.propertiesService.getProperties().subscribe( properties => {
+  //     /** List every properties */
+  //     this.properties = properties;
+  //     //console.log(this.properties);
+  //   });
+  // }
 
   /*Edit a property*/
   editProperty(event, property: PropiedadInterface) {
@@ -60,12 +54,12 @@ export class EditComponent implements OnInit, OnDestroy {
     
   }
 
-  ngDoCheck() {
-    this.propertiesService.getProperties().subscribe( properties => {
-      /** List every properties */
-      this.properties = properties;
-      //console.log(this.properties);
-    });
-  }
+  // ngDoCheck() {
+  //   this.propertiesService.getProperties().subscribe( properties => {
+  //     /** List every properties */
+  //     this.properties = properties;
+  //     //console.log(this.properties);
+  //   });
+  // }
 
 }

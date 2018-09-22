@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PropertyService } from '../../services/property.service';
 import { PropiedadInterface } from '../../models/propiedadInterface';
+import { Observable } from 'rxjs-compat';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -15,29 +17,19 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private propertiesService: PropertyService
-  ) { }
-
-
-  ngOnInit() {
+  ) { 
     this.propertiesService.getProperties().subscribe( properties => {
       /** List every properties */
       this.properties = properties;
-      //console.log(this.properties);      
+        
     });
-    
+    this.propertiesService.getProperty().subscribe( property => {
+      console.log(property);
+    });
   }
 
-  // ngAfterContentInit() {
-  //   this.propertiesService.getProperties().subscribe( properties => {
-  //     /** List every properties */
-  //     this.properties = properties;
-  //     console.log(this.properties);      
-  //   });
-  // }
 
-
-
-  
+  ngOnInit() { }  
 
   updateCurso(property: PropiedadInterface) {
     this.propertiesService.updateProperty(property);
