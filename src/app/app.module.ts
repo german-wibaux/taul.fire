@@ -22,6 +22,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms';
 import { PropertyComponent } from './components/property/property.component';
 import { AngularFireStorageModule } from 'angularfire2/storage';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
     EditComponent,
     ContactComponent,
     LoginPageComponent,
-    PropertyComponent
+    PropertyComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

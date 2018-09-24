@@ -20,7 +20,7 @@ li > a, h3 > a {
     /* bottom: 0; */
     left: 0;
     top: 28px;
-    background: white;
+    background: #FCAB1D;
     visibility: hidden;
     border-radius: 5px;
     -webkit-transform: scaleX(0);
@@ -36,6 +36,18 @@ li > a, h3 > a {
     visibility: visible;
     transform: scaleX(0.6);
   }
-  li > a:focus {
-    color: orange ;
+  li > a:hover{
+    color: #FCAB1D;
   }
+  li > a:focus {
+    color: #FCAB1D ;
+  }
+
+.bg-light {
+  background-color: rgb(31, 26, 23) !important;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}

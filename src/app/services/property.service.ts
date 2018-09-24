@@ -42,8 +42,8 @@ export class PropertyService {
     return this.properties;
   }
 
-  public getProperty() {
-    this.propertyDoc = this.afs.collection('properties').doc('3yNqaVxpL83AJ4Ah37uJ');
+  public getProperty(property) {
+    this.propertyDoc = this.afs.collection('properties').doc(property);
     this.property = this.propertyDoc.snapshotChanges().pipe(map(action => {
       const id = action.payload.id;
       const data = action.payload.data() as PropiedadInterface;

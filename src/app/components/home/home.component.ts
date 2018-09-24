@@ -3,6 +3,7 @@ import { PropertyService } from '../../services/property.service';
 import { PropiedadInterface } from '../../models/propiedadInterface';
 import { Observable } from 'rxjs-compat';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,17 +17,22 @@ export class HomeComponent implements OnInit {
   propertyToEdit: PropiedadInterface;
 
   constructor(
-    private propertiesService: PropertyService
+    private propertiesService: PropertyService,
+    private route: Router
   ) { 
     this.propertiesService.getProperties().subscribe( properties => {
       /** List every properties */
       this.properties = properties;
         
     });
-    this.propertiesService.getProperty().subscribe( property => {
+    //this.propertiesService.getProperty().subscribe( property => {
       //console.log(property);
-    });
+    
   }
+
+  // goDetails () {
+  //   this.route.navigate(['/details'], { queryParams: { order: proper } });
+  // }
 
 
   ngOnInit() { }  

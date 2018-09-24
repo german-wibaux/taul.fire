@@ -1,0 +1,15 @@
+.container-fluid {
+    padding: 0 !important;
+}
+
+.ventas {
+    background-color: orange !important;
+    width: 100% !important;
+    padding-top: 6rem;
+}
+
+.alquileres {
+    background-color: #D07105 !important;
+    width: 100% !important;
+    padding-top: 6rem;
+}
