@@ -76,7 +76,17 @@
                     <input [(ngModel)]='property.geolocalizacion'  [ngModelOptions]="{standalone: true}" #geolocalizacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Geolocalizacion" />            
                 </div>
               </div>
+
+              <div class="form-row form-group" >
+                <div class="col" >
+                    <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                    <!-- <div class="progress">
+                        <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                      </div> -->
+                </div>
+              </div>
               
+             
               <div class="form-row form-group">
                   <div class="col">
                       <button class="btn btn-block btn-success btn-lg" type="submit">Crear Propiedad</button>
@@ -86,4 +96,5 @@
           </form>
       </div>
   </div>
+  
 </div>

@@ -24,15 +24,15 @@ export class HomeComponent implements OnInit {
         
     });
     this.propertiesService.getProperty().subscribe( property => {
-      console.log(property);
+      //console.log(property);
     });
   }
 
 
   ngOnInit() { }  
 
-  updateCurso(property: PropiedadInterface) {
-    this.propertiesService.updateProperty(property);
-  }
+  // updateCurso(property: PropiedadInterface) {
+  //   this.propertiesService.updateProperty(property);
+  // }
 
 }

@@ -14,5 +14,6 @@ export interface PropiedadInterface {
     propiedad?: string;
     superficieCubierta?: string;
     superficieTotal?: string;
-
+    imagen1?: string;
 }
+

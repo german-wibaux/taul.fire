@@ -62,6 +62,11 @@ export class PropertyService {
 
   }
 
+  // getFileUploads(numberItems): AngularFireList<FileUpload> {
+  //   return this.afs.list('/test', ref =>
+  //     ref.limitToLast(numberItems));
+  // }
+
   deletProperty(property: PropiedadInterface) {
     console.log('Delete property');
   }

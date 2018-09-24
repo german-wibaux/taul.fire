@@ -8,7 +8,6 @@ import { NewPropertyComponent } from './components/new-property/new-property.com
 import { AdminComponent } from './components/admin/admin.component';
 import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { DetailsComponent } from './components/details/details.component';
 import { EditComponent } from './components/edit/edit.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
@@ -22,6 +21,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule } from '@angular/forms';
 import { PropertyComponent } from './components/property/property.component';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,6 @@ import { PropertyComponent } from './components/property/property.component';
     AdminComponent,
     AboutComponent,
     NotFoundComponent,
-    DetailsComponent,
     EditComponent,
     ContactComponent,
     LoginPageComponent,
@@ -45,7 +44,8 @@ import { PropertyComponent } from './components/property/property.component';
     AngularFirestoreModule,
     AngularFireAuthModule, 
     AngularFireModule,
-    FormsModule
+    FormsModule,
+    AngularFireStorageModule
     
   ],
   providers: [AuthService, PropertyService],
