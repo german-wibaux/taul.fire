@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -10,18 +10,22 @@ import { AuthService } from '../../services/auth.service';
 export class NavBarComponent implements OnInit {
 
   constructor(private router: Router,
+    private route: ActivatedRoute, 
     private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  // onComprobarUserLogin() {
-  //   this.authService.getAuth().subscribe( auth => {
-  //     if( auth ){
-  //       console.log(auth);
-  //     }
-  //   })
-  // }
+  
+
+  onAnchorClick ( ) {
+    this.route.fragment.subscribe ( f => {
+      const element = document.querySelector ( "#" + f )      
+      if ( element ) element.scrollIntoView ( )
+    });    
+  }
+
+  
 
   onLogout() {
     this.authService.logout();

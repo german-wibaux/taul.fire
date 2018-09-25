@@ -13,19 +13,17 @@
           <ul class="navbar-nav mr-auto">
 
             <li class="nav-item">
-              <a class="" routerLink='/'>Inicio
-
-              </a>
+              <a class="" routerLink='/' fragment="ventas" (click)='onAnchorClick()'>Inicio </a>
             </li>
             <li class="nav-item">
-              <a class="" href="#alquileres" >Alquileres</a>
+              <a class="" routerLink='/' fragment="alquileres" (click)='onAnchorClick()'> Alquileres</a>
             </li>
             <li class="nav-item">
-              <a class=" " href="#ventas">Ventas</a>
+              <a class=" " routerLink='/' fragment="ventas" (click)='onAnchorClick()'>Ventas</a>
             </li>
 
             <li class="nav-item">
-              <a class=" " href="#nosotros">Nosotros</a>
+              <a class=" " routerLink='/' fragment="nosotros" (click)='onAnchorClick()' >Nosotros</a>
             </li>
             <li class="nav-item">
               <a class="" routerLink='/contact'>Contacto</a>
