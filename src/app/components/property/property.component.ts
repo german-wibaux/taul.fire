@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PropertyService } from '../../services/property.service';
 import { ActivatedRoute } from '@angular/router';
+import { PropiedadInterface } from '../../models/propiedadInterface';
 
 @Component({
   selector: 'app-property',
@@ -8,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./property.component.css']
 })
 export class PropertyComponent implements OnInit {
-
+  property: PropiedadInterface = null;
 
 
   constructor(private propertyService: PropertyService , private route: ActivatedRoute) { }
@@ -17,7 +18,7 @@ export class PropertyComponent implements OnInit {
    // this.propertyService.getProperty()
    this.route.params.subscribe( result => {
      this.propertyService.getProperty(result['id']).subscribe( resultProp => {
-      console.log(resultProp);
+      this.property = resultProp;      
      })
    });
   }

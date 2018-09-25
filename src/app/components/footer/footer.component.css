@@ -8,3 +8,11 @@
     justify-content: center;
     align-items: baseline;
 }
+
+.row {
+    justify-content: center;
+}
+
+.row > img {
+    height: 2rem;
+}
