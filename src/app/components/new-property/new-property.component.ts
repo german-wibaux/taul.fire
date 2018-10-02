@@ -34,7 +34,7 @@ export class NewPropertyComponent implements OnInit {
     propiedad: '',
     superficieCubierta: '',
     superficieTotal: '',
-    imagen1: '',
+    imagen: [],
   }
 
   constructor(private propertyService: PropertyService, private storage: AngularFireStorage) { }
@@ -59,7 +59,7 @@ export class NewPropertyComponent implements OnInit {
     }
     let loading = true;
     const day = new Date();
-    const path = 'test/' + day.getTime() + '/' + file.name;
+    const path = 'properties/' + day.getTime() + '/' + file.name;
     const customMetadata = { app: 'taul-app' };
     const ref = this.storage.ref(path);
     this.task = this.storage.upload(path, file, { customMetadata });
@@ -70,14 +70,14 @@ export class NewPropertyComponent implements OnInit {
       switchMap(() => ref.getDownloadURL()),
       tap(url => {
         // use url here, e.g. assign it to a model       
-        this.property.imagen1 = url;
-        alert('success');
+        this.property.imagen.push(url);        
       }),
       finalize(() => loading = false)
     ).subscribe(() => {
       // success
     }, error => {
       // failure
+      console.log(error);
     });
 
     //*********************Codigo pa la barra de progreso y algo mas si pinta************************

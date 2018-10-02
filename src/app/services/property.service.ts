@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PropertyService {
-  propertyCollection: AngularFirestoreCollection<PropiedadInterface>;
+  propertyCollection: AngularFirestoreCollection<PropiedadInterface> = null;
   properties: Observable<PropiedadInterface[]>;
   property: Observable<PropiedadInterface>;
   propertyDoc: AngularFirestoreDocument<PropiedadInterface>;
@@ -57,7 +57,8 @@ export class PropertyService {
   }
 
   addProperty(property: PropiedadInterface) {
-    this.propertyCollection.add(property);
+    this.afs.collection('properties').add(property); 
+    //propertyCollection.add(property);
 
 
   }
