@@ -17,11 +17,11 @@
 .section-custom {
     
     display: flex;
-    justify-content: center;   
+    justify-content: center;  
 }
 
 .custom {
-    background-color:  #ffc999;
+    background-color:  #ffad33;
     width: 100%;  
     display: flex;
     justify-content: center;   
@@ -32,7 +32,7 @@
 } 
 
 .custom-row{
-    width: 80%; 
+    /* width: 80%;  */
 }
 
 /* .jumbotron{
@@ -48,4 +48,34 @@
 .pricing {
     
     right: 0 !important;
+}
+
+.tag {
+    background-color: rgb(252,183,72);
+    float: left;
+    width: 200px;
+    height: auto;
+    font-family: 'Museo500-Regular', sans-serif;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom-right-radius: 10px;
+    display: block;
+    /* margin-top: -50px; */
+    color: white;
+    text-align: center;
+}
+
+.principal-features {
+    display: flex;
+    flex-direction: column;
+}
+
+article > h4 {
+    margin-bottom: 4.5rem;
+}
+
+.principal-features > p {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
 }

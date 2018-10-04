@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { PropertyComponent } from './components/property/property.component';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { FooterComponent } from './components/footer/footer.component';
+import { WaitingComponent } from './components/waiting/waiting.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactComponent,
     LoginPageComponent,
     PropertyComponent,
-    FooterComponent
+    FooterComponent,
+    WaitingComponent
   ],
   imports: [
     BrowserModule,

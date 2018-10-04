@@ -12,6 +12,7 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { NewPropertyComponent } from './components/new-property/new-property.component';
 import { PropertyComponent } from './components/property/property.component';
 import { AboutComponent } from './components/about/about.component';
+import { WaitingComponent } from './components/waiting/waiting.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
     { path: 'new-property', component: NewPropertyComponent },
     { path: 'details/:id', component: PropertyComponent },
     { path: 'edit', component: EditComponent },
+    { path: 'wait', component: WaitingComponent },
     { path: '**', component: NotFoundComponent }
 ];
 

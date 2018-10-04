@@ -48,7 +48,7 @@
               </div>
               <div class="form-row form-group">
                 <div class="col">
-                    <input [(ngModel)]='property.operacion'  [ngModelOptions]="{standalone: true}" #operacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Operacion" />            
+                    <input [(ngModel)]='property.operacion'  [ngModelOptions]="{standalone: true}" #operacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Tipo de Operacion" />            
                 </div>
               </div>
               <div class="form-row form-group">
@@ -80,6 +80,7 @@
               <div class="form-row form-group" >
                 <div class="col" >
                     <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                    <div>{{ uploadPercent | async }}</div>
                     <!-- <div class="progress">
                         <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                       </div> -->

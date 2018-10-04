@@ -10,7 +10,7 @@ import { PropiedadInterface } from '../../models/propiedadInterface';
 })
 export class PropertyComponent implements OnInit {
   property: PropiedadInterface = null;
-
+  images: String[] = [];
 
   constructor(private propertyService: PropertyService , private route: ActivatedRoute) { }
 
@@ -18,7 +18,9 @@ export class PropertyComponent implements OnInit {
    // this.propertyService.getProperty()
    this.route.params.subscribe( result => {
      this.propertyService.getProperty(result['id']).subscribe( resultProp => {
-      this.property = resultProp;      
+      this.property = resultProp;
+      this.images = this.property.imagen;
+            
      })
    });
   }

@@ -1,5 +1,5 @@
 .tag {
-    background-color: rgb(252,183,72);
+    background-color: rgb(31, 26, 23);
     float: left;
     width: 200px;
     height: auto;
@@ -15,13 +15,16 @@
 }
 
 .space-sm {
-    padding-top: 0;
-    padding-left: 2rem;
-    background-color: #ffcc80;
+    padding-top: 0;    
+    background-color: #ffc266;
 }
 
 .text-about {
     padding-top: 4rem;
+}
+
+.text-about > p {
+    padding-left: 2rem;
 }
 
 .container-fluid {
