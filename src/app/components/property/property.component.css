@@ -14,12 +14,6 @@
     background-size: contain;
 }
 
-.section-custom {
-    
-    display: flex;
-    justify-content: center;  
-}
-
 .custom {
     background-color:  #ffad33;
     width: 100%;  
@@ -31,22 +25,7 @@
     width: 50%;
 } 
 
-.custom-row{
-    /* width: 80%;  */
-}
-
-/* .jumbotron{
-    display: flex;
-    justify-content: center;
-} */
-
-
-/* .jumbotron{
-    width: 50%;
-} */
-
-.pricing {
-    
+.pricing {    
     right: 0 !important;
 }
 
@@ -73,6 +52,7 @@
 
 article > h4 {
     margin-bottom: 4.5rem;
+    padding-left: 5rem;
 }
 
 .principal-features > p {
