@@ -25,6 +25,8 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { FooterComponent } from './components/footer/footer.component';
 import { WaitingComponent } from './components/waiting/waiting.component';
 
+import { CarouselModule } from 'ngx-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +51,8 @@ import { WaitingComponent } from './components/waiting/waiting.component';
     AngularFireAuthModule, 
     AngularFireModule,
     FormsModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    CarouselModule.forRoot()
     
   ],
   providers: [AuthService, PropertyService],

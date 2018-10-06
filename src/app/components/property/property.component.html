@@ -2,9 +2,9 @@
     <section class="custom">
 
 
-        <div id="carouselExampleIndicators" class="carousel slide box-shadow" data-ride="carousel" data-interval="9000">
+        <!-- <div id="carouselExampleIndicators" class="carousel slide box-shadow" data-ride="carousel" data-interval="9000">
             <ol class="carousel-indicators">
-                <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active" *ngFor="let image of images ; let i = index "></li> -->
+               <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active" *ngFor="let image of images ; let i = index "></li> 
              
             </ol>
             <div class="carousel-inner">
@@ -21,8 +21,19 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </div> -->
 
+        <carousel  >
+            <slide *ngFor="let slide of slides; let index=index">
+              <img [src]="slide.image" alt="image slide" class="inside-carousel" >
+           
+              <div class="carousel-caption">
+                <!-- <h4>Slide {{index}}</h4>
+                <p>{{slide.text}}</p> -->
+              </div>
+            </slide>
+          </carousel>
+        
 
     </section>
     <section *ngIf="property != null" class="section-custom">

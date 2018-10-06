@@ -59,3 +59,8 @@ article > h4 {
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
 }
+
+.inside-carousel {
+    height: 22rem;
+    width: 40rem;
+}
