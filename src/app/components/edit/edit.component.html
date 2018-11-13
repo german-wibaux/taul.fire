@@ -1,4 +1,11 @@
 
+    <section class=" d-flex justify-content-center">
+            <div class="row col-10">
+                <button type="button" class="btn btn-primary" routerLink='/new-property' >Agregar propiedad</button>
+            </div>
+        
+    </section>
+
   <section class=" d-flex justify-content-center" ngOnChange="showChange()">
   <div class="row col-10">
     <div class="col">
@@ -38,9 +45,9 @@
                                     <i class="icon-dots-three-horizontal"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" (click)="editProperty($event, property)" >Ver/Editar</a>
+                                    <a class="dropdown-item" [routerLink]="['/update-prop' , property.id ]" >Ver/Editar</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Borrar</a>
+                                    <a class="dropdown-item" (click)="deleteCurso(property)" >Borrar</a>
                                 </div>
                             </div>
                         </td>                        

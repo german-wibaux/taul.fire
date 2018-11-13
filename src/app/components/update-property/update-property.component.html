@@ -1,0 +1,153 @@
+<div class="col-12 card-body bg-secondary">
+    <div class="text-center mb-5">
+        <h1 class="h2 mb-2">Editar propiedad</h1>
+        <span>No hay campos obligatorios lo que se cargue es lo que se vera en la pagina</span>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-9">
+            <form (ngSubmit)="onUpdateProperty(property)" #formNew="ngForm" >
+                <div class="form-row form-group">
+                    <div class="col">
+                        <input [(ngModel)]="property.nombre" [ngModelOptions]="{standalone: true}" #nombre="ngModel" class="form-control form-control-lg" type="text"  placeholder="Nombre" />
+                    </div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col">
+                        <input [(ngModel)]='property.codigo'  [ngModelOptions]="{standalone: true}" #codigo='ngModel' class="form-control form-control-lg" type="text"  placeholder="Codigo" />
+                    </div>                 
+                </div>
+                <div class="form-row form-group">
+                    <div class="col">
+                        <input [(ngModel)]='property.estado' [ngModelOptions]="{standalone: true}" #estado='ngModel' class="form-control form-control-lg" type="text"  placeholder="Estado" />
+                    </div>
+                </div>
+                <div class="form-row form-group">
+                    <div class="col">
+                        <input [(ngModel)]='property.descripcion'  [ngModelOptions]="{standalone: true}" #descripcion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Descripcion" />            
+                    </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.habitaciones'  [ngModelOptions]="{standalone: true}" #habitaciones='ngModel' class="form-control form-control-lg" type="text"  placeholder="Habitaciones" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.banios'  [ngModelOptions]="{standalone: true}" #banios='ngModel' class="form-control form-control-lg" type="text" placeholder="Baños" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.cocheras'  [ngModelOptions]="{standalone: true}" #cocheras='ngModel' class="form-control form-control-lg" type="text"  placeholder="Cocheras" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.localidad'  [ngModelOptions]="{standalone: true}" #localidad='ngModel' class="form-control form-control-lg" type="text"  placeholder="Localidad" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.operacion'  [ngModelOptions]="{standalone: true}" #operacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Tipo de Operacion" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.propiedad'  [ngModelOptions]="{standalone: true}" #propiedad='ngModel' class="form-control form-control-lg" type="text"  placeholder="Tipo de propiedad" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.superficieCubierta'  [ngModelOptions]="{standalone: true}" #superficieCubierta='ngModel' class="form-control form-control-lg" type="text" placeholder="Superficie cubierta" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.superficieTotal'  [ngModelOptions]="{standalone: true}" #superficieTotal='ngModel' class="form-control form-control-lg" type="text"  placeholder="Superficie total" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.precio'  [ngModelOptions]="{standalone: true}" #precio='ngModel' class="form-control form-control-lg" type="text"  placeholder="Precio" />            
+                  </div>
+                </div>
+                <div class="form-row form-group">
+                  <div class="col">
+                      <input [(ngModel)]='property.geolocalizacion'  [ngModelOptions]="{standalone: true}" #geolocalizacion='ngModel' class="form-control form-control-lg" type="text"  placeholder="Geolocalizacion" />            
+                  </div>
+                </div>
+  
+                <div class="form-row form-group" >
+                  <div class="col" >
+                      <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <div>{{ uploadPercent | async }}</div>
+                      <!-- <div class="progress">
+                          <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                        </div> -->
+                  </div>
+                </div>
+                
+                <div class="form-row form-group" >
+                  <div class="col" >
+                      <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <!-- <div class="progress">
+                          <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                        </div> -->
+                  </div>
+                </div>
+  
+                <div class="form-row form-group" >
+                  <div class="col" >
+                      <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <!-- <div class="progress">
+                          <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                        </div> -->
+                  </div>
+                </div>
+  
+                <div class="form-row form-group" >
+                  <div class="col" >
+                      <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <!-- <div class="progress">
+                          <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                        </div> -->
+                  </div>
+                </div>
+  
+                <div class="form-row form-group" >
+                  <div class="col" >
+                      <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <!-- <div class="progress">
+                          <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                        </div> -->
+                  </div>
+                </div>
+  
+                <div class="form-row form-group" >
+                  <div class="col" >
+                      <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <!-- <div class="progress">
+                          <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                        </div> -->
+                  </div>
+                </div>
+                <div class="form-row form-group" >
+                  <div class="col" >
+                      <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <!-- <div class="progress">
+                          <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
+                        </div> -->
+                  </div>
+                </div>
+               
+                <div class="form-row form-group">
+                    <div class="col">
+                        <button class="btn btn-block btn-success btn-lg" type="submit">Editar Propiedad</button>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+  </div>

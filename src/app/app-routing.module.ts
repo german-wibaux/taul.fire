@@ -13,6 +13,7 @@ import { NewPropertyComponent } from './components/new-property/new-property.com
 import { PropertyComponent } from './components/property/property.component';
 import { AboutComponent } from './components/about/about.component';
 import { WaitingComponent } from './components/waiting/waiting.component';
+import { UpdatePropertyComponent } from './components/update-property/update-property.component';
 
 
 const routes: Routes = [
@@ -24,13 +25,14 @@ const routes: Routes = [
     //{ path: 'details', component: PropertyComponent },
     { path: 'new-property', component: NewPropertyComponent },
     { path: 'details/:id', component: PropertyComponent },
-    { path: 'edit', component: EditComponent },
+    { path: 'update-prop/:id', component: UpdatePropertyComponent },
+    { path: 'edit', canActivate:[AuthGuardService], component: EditComponent },
     { path: 'wait', component: WaitingComponent },
     { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes)], 
     exports: [RouterModule] 
 })
 

@@ -26,6 +26,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { WaitingComponent } from './components/waiting/waiting.component';
 
 import { CarouselModule } from 'ngx-bootstrap';
+import { UpdatePropertyComponent } from './components/update-property/update-property.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CarouselModule } from 'ngx-bootstrap';
     LoginPageComponent,
     PropertyComponent,
     FooterComponent,
-    WaitingComponent
+    WaitingComponent,
+    UpdatePropertyComponent
   ],
   imports: [
     BrowserModule,

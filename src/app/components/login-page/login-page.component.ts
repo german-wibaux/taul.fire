@@ -34,7 +34,7 @@ export class LoginPageComponent implements OnInit {
        .then((res) => {
           console.log(res);
     
-          this.router.navigate(['private']);
+          this.router.navigate(['edit']);
        })
        .catch((err) => console.log('error: ' + err));
   }

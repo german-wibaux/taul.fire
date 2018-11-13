@@ -54,6 +54,11 @@ export class EditComponent implements OnInit, OnDestroy {
     
   }
 
+  deleteCurso(property) {
+    this.propertiesService.deletProperty(property);
+    this.router.navigate(['/']);
+  }
+
   // ngDoCheck() {
   //   this.propertiesService.getProperties().subscribe( properties => {
   //     /** List every properties */

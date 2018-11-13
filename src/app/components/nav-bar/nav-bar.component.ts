@@ -34,6 +34,7 @@ export class NavBarComponent implements OnInit {
 
   onLogout() {
     this.authService.logout();
+    //console.log('entro');
   }
 
 }

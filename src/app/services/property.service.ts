@@ -69,7 +69,8 @@ export class PropertyService {
   // }
 
   deletProperty(property: PropiedadInterface) {
-    console.log('Delete property');
+    this.propertyDoc = this.afs.doc(`properties/${property.id}`);
+    this.propertyDoc.delete();
   }
 
   updateProperty(property: PropiedadInterface) {

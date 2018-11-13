@@ -38,6 +38,7 @@ li > a, h3 > a {
   }
   li > a:hover{
     color: #FCAB1D;
+    cursor: pointer;
   }
   li > a:focus {
     color: #FCAB1D ;
