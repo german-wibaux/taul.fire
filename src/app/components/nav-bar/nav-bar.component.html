@@ -41,7 +41,7 @@
               <a class=" " routerLink='/edit' *ngIf='isLoggedIn()' >Administracion</a>
             </li>
             <li class="nav-item">
-              <a class=" " (click)="onLogout()" >Salir</a>
+              <a class=" " (click)="onLogout()" *ngIf='isLoggedIn()'>Salir</a>
             </li>
             <hr>
           </ul>
