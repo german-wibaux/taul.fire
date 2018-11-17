@@ -82,8 +82,9 @@
   
                 <div class="form-row form-group" >
                   <div class="col" >
-                      <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <input type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
                       <div>{{ uploadPercent | async }}</div>
+                      <a href='{{ property.imagen[0] }}' target="_blank" >Imagen 1</a>
                       <!-- <div class="progress">
                           <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                         </div> -->
@@ -93,6 +94,8 @@
                 <div class="form-row form-group" >
                   <div class="col" >
                       <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <div>{{ uploadPercent | async }}</div>
+                      <a href='{{ property.imagen[1] }}' target="_blank" *ngIf='property.imagen[1]' >Imagen 2</a>
                       <!-- <div class="progress">
                           <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                         </div> -->
@@ -102,6 +105,8 @@
                 <div class="form-row form-group" >
                   <div class="col" >
                       <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <div>{{ uploadPercent | async }}</div>
+                      <a href='{{ property.imagen[2] }}' target="_blank" *ngIf='property.imagen[2]' >Imagen 3</a>
                       <!-- <div class="progress">
                           <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                         </div> -->
@@ -111,6 +116,8 @@
                 <div class="form-row form-group" >
                   <div class="col" >
                       <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <div>{{ uploadPercent | async }}</div>
+                      <a href='{{ property.imagen[3] }}' target="_blank" *ngIf='property.imagen[3]' >Imagen 4</a>
                       <!-- <div class="progress">
                           <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                         </div> -->
@@ -120,6 +127,8 @@
                 <div class="form-row form-group" >
                   <div class="col" >
                       <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <div>{{ uploadPercent | async }}</div>
+                      <a href='{{ property.imagen[4] }}' target="_blank" *ngIf='property.imagen[4]' >Imagen 5</a>
                       <!-- <div class="progress">
                           <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                         </div> -->
@@ -129,6 +138,8 @@
                 <div class="form-row form-group" >
                   <div class="col" >
                       <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <div>{{ uploadPercent | async }}</div>
+                      <a href='{{ property.imagen[5] }}' target="_blank" *ngIf='property.imagen[5]' >Imagen 6</a>
                       <!-- <div class="progress">
                           <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                         </div> -->
@@ -137,6 +148,8 @@
                 <div class="form-row form-group" >
                   <div class="col" >
                       <input  type="file" (change)="uploadFile($event)" accept=".png,.jpg" />
+                      <div>{{ uploadPercent | async }}</div>
+                      <a href='{{ property.imagen[6] }}' target="_blank" *ngIf='property.imagen[6]' >Imagen 7</a>
                       <!-- <div class="progress">
                           <p><ngb-progressbar type="info" [value]='{{ uploadPercent | async }}'></ngb-progressbar></p>
                         </div> -->
