@@ -2,3 +2,7 @@
     border-bottom: 5rem;
     border-bottom-color: brown;
 }
+
+.delete-button{
+    cursor: pointer;
+}

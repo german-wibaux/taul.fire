@@ -36,18 +36,7 @@ export class AuthService {
         private _firebaseAuth: AngularFireAuth
     ) { 
         this.provider = new firebase.auth.GoogleAuthProvider();
-        this.user = _firebaseAuth.authState;
-
-        this.user.subscribe(
-            (user) => {
-            if (user) {
-                this.userDetails = user;
-                // console.log(this.userDetails);
-            } else {
-                this.userDetails = null;
-            }
-            }
-        );
+        
 
      }
 
@@ -71,10 +60,22 @@ export class AuthService {
 
     signInRegular(email, password) {
         const credential = firebase.auth.EmailAuthProvider.credential( email, password );
+        this.user = this._firebaseAuth.authState;
+
+        this.user.subscribe(
+            (user) => {
+            if (user) {
+                this.userDetails = user;
+                // console.log(this.userDetails);
+            } else {
+                this.userDetails = null;
+            }
+            }
+        );
         return this._firebaseAuth.auth.signInWithEmailAndPassword(email, password)
      }
 
-     isLoggedIn() {
+     isLoggedIn() {         
         if (this.userDetails == null ) {
             return false;
         } else {

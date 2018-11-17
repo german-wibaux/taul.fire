@@ -32,7 +32,7 @@ export class LoginPageComponent implements OnInit {
   signInWithEmail() {
     this.authservice.signInRegular(this.user.email, this.user.password)
        .then((res) => {
-          console.log(res);
+          console.log(this.authservice.isLoggedIn());
     
           this.router.navigate(['edit']);
        })
