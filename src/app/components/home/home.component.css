@@ -13,6 +13,10 @@
 .alquileres {
     background-color: #ffad33 !important;
     width: 100% !important;
+    width: 100% !important;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
     /* padding-top: 6rem; */
 }
 

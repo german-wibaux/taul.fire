@@ -1,4 +1,4 @@
-<div *ngIf="properties != null" class="container-fluid" id="init">
+<div *ngIf="propertiesVenta.length > 0 " class="container-fluid" id="init">
     <section id="ventas" class="space-sm ventas">
             <div class="tag">               
                     Ventas              
@@ -9,8 +9,8 @@
                 
             <ul class="row feature-list feature-list-sm">
 
-                <li *ngFor="let property of properties" class="col-12 col-md-6 col-lg-4">
-                    <div class="card" *ngIf="property.operacion == 'Venta'" >
+                <li *ngFor="let property of propertiesVenta" class="col-12 col-md-6 col-lg-4">
+                    <div class="card"  >
                         <a>
                             <img class="card-img-top" src={{property.imagen[0]}} alt="Card image cap">
                         </a>
@@ -47,7 +47,7 @@
     </section>
     <!--end of section-->
 
-    <section id="alquileres" class="space-sm flush-with-above alquileres">
+    <section id="alquileres" class="space-sm  alquileres">
             <div class="tag">               
                     Alquileres               
             </div>
@@ -55,8 +55,8 @@
                 
             <ul class="row feature-list feature-list-sm">
 
-                <li *ngFor="let property of properties" class="col-12 col-md-6 col-lg-4"  >
-                    <div class="card" *ngIf="property.operacion == 'Alquiler'" >
+                <li *ngFor="let property of propertiesAlquiler" class="col-12 col-md-6 col-lg-4"  >
+                    <div class="card" >
                         <a>
                             <img class="card-img-top" src={{property.imagen[0]}} alt="Card image cap">
                         </a>
@@ -67,16 +67,17 @@
                         <div class="card-footer card-footer-borderless d-flex justify-content-between">
 
                             <div class="dropup">
-                                <button class="btn btn-sm btn-outline-primary dropdown-toggle dropdown-toggle-no-arrow"
-                                    type="button" id="SidekickButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <i class="icon-dots-three-horizontal"></i>
+                                <button class="btn btn-sm btn-outline-primary"
+                                    type="button" id="SidekickButton" 
+                                    aria-expanded="false"  [routerLink]="['/details' , property.id ]" >
+                                    <!-- <i class="icon-dots-three-horizontal"></i> -->
+                                    <span>Ver mas</span>
                                 </button>
-                                <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="SidekickButton">
+                                <!-- <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="SidekickButton">
                                     <a class="dropdown-item" [routerLink]="['/details' , property.id ]">Ver mas</a>
 
-                                    <!--  -->
-                                </div>
+                                   
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -96,6 +97,6 @@
 
 </div>
 
-<app-waiting *ngIf="properties == null" ></app-waiting>
+<app-waiting *ngIf="propertiesVenta.length == 0" ></app-waiting>
 
  

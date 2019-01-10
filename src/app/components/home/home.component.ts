@@ -4,6 +4,7 @@ import { PropiedadInterface } from '../../models/propiedadInterface';
 import { Observable } from 'rxjs-compat';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { ElementSchemaRegistry } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  properties: PropiedadInterface[];
+  propertiesVenta: PropiedadInterface[] = [];
+  propertiesAlquiler: PropiedadInterface[] = [];
   editState: boolean = false;
   propertyToEdit: PropiedadInterface;
 
@@ -22,7 +24,14 @@ export class HomeComponent implements OnInit {
   ) { 
     this.propertiesService.getProperties().subscribe( properties => {
       /** List every properties */
-      this.properties = properties;
+      properties.forEach(element => {
+        if (element.operacion == 'Venta') {
+          this.propertiesVenta.push(element);
+        } else if (element.operacion == 'Alquiler') {
+          this.propertiesAlquiler.push(element);
+        }
+      });
+      
         
     });
     //this.propertiesService.getProperty().subscribe( property => {
